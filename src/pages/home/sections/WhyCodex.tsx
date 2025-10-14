@@ -20,7 +20,7 @@ export default function WhyCodexy() {
     ];
 
     return (
-        <section className='bg-[#0D1117] py-16 px-8 min-h-dvh'>
+        <section className='bg-[#0D1117] py-16 px-8'>
             <div className='text-center mb-20'>
                 <h2 className='text-white text-4xl md:text-5xl font-bold mb-4'>Por que escolher a <span className='bg-gradient-to-r from-[#0046AA] to-[#0059D1] bg-clip-text text-transparent'>Codexy</span>?</h2>
                 <p className='text-gray-400 text-md md:text-lg max-w-3xl mx-auto'>Somos mais que uma empresa de tecnologia. Somos parceiros estratégicos do seu crescimento!</p>
