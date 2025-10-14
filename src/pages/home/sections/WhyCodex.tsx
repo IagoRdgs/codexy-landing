@@ -26,7 +26,7 @@ export default function WhyCodexy() {
                 <p className='text-gray-400 text-md md:text-lg max-w-3xl mx-auto'>Somos mais que uma empresa de tecnologia. Somos parceiros estratégicos do seu crescimento!</p>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-20'>
                 {features.map((feature, index) => (
                     <FeatureCard
                         key={index}
@@ -36,6 +36,8 @@ export default function WhyCodexy() {
                     />
                 ))}
             </div>
+
+            <StatsBox />
         </section>
     );
 };
@@ -60,6 +62,27 @@ const FeatureCard = ({ Icon, title, description }: FeatureCardProps) => {
                 <p className='text-gray-400 leading-relaxed text-base'>
                     {description}
                 </p>
+            </div>
+        </div>
+    );
+};
+
+const StatsBox = () => {
+    const stats = [
+        { number: '10+', label: 'Projetos entregues' },
+        { number: '100%', label: 'Clientes satisfeitos' },
+        { number: '24/7', label: 'Suporte disponível' }
+    ];
+
+    return (
+        <div className='bg-gradient-to-br from-gray-900/80 via-[#0046AA]/5 to-gray-900/80 border border-[#0046AA]/20 rounded-2xl px-6 py-8 md:px-8 md:py-10'>
+            <div className='grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#0046AA]/20 '>
+                {stats.map((stat, index) => (
+                    <div key={index} className='text-center group py-6 md:py-0'>
+                        <h4 className='text-5xl font-black bg-gradient-to-r from-[#0046AA] to-[#0059D1] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300'>{stat.number}</h4>
+                        <span className='text-gray-400 text-base md:text-lg font-medium'>{stat.label}</span>
+                    </div>
+                ))}
             </div>
         </div>
     );
