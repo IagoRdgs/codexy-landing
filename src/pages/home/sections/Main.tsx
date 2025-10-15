@@ -9,7 +9,7 @@ export default function Main() {
             style={{ backgroundImage: `url(${codexyBg})` }}
             className='font-montserrat min-h-dvh h-dvh bg-cover bg-center bg-no-repeat flex justify-end px-8 md:px-24'
         >
-            <div className='flex flex-col h-dvh md:w-[70%] justify-center text-white gap-6 md:gap-8'>
+            <div className='flex flex-col md:w-[70%] justify-center text-white gap-6 md:gap-8'>
                 <div className='w-full flex justify-center'>
                     <img src={codexyLogo} alt="codexy logo" width={250} height={150} />
                 </div>
