@@ -7,7 +7,7 @@ export default function Main() {
     return (
         <section
             style={{ backgroundImage: `url(${codexyBg})` }}
-            className='font-montserrat min-h-screen supports-[min-height:100dvh]:min-h-dvh bg-cover bg-center bg-no-repeat flex justify-end px-8 md:px-24'
+            className='font-montserrat min-h-dvh h-dvh bg-cover bg-center bg-no-repeat flex justify-end px-8 md:px-24'
         >
             <div className='flex flex-col h-dvh md:w-[70%] justify-center text-white gap-6 md:gap-8'>
                 <div className='w-full flex justify-center'>
