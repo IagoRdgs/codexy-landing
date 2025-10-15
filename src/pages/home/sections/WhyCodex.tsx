@@ -75,8 +75,8 @@ const StatsBox = () => {
     ];
 
     return (
-        <div className='bg-gradient-to-br from-gray-900/80 via-[#0046AA]/5 to-gray-900/80 border border-[#0046AA]/20 rounded-2xl px-6 py-8 md:px-8 md:py-10'>
-            <div className='grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#0046AA]/20 '>
+        <div className='bg-gradient-to-br from-gray-900/80 via-[#0046AA]/5 to-gray-900/80 border border-[#0046AA]/35 rounded-2xl px-6 py-8 md:px-8 md:py-10'>
+            <div className='grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#0046AA]/35 '>
                 {stats.map((stat, index) => (
                     <div key={index} className='text-center group py-6 md:py-0'>
                         <h4 className='text-5xl font-black bg-gradient-to-r from-[#0046AA] to-[#0059D1] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300'>{stat.number}</h4>
