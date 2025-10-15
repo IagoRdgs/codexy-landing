@@ -52,7 +52,7 @@ const FeatureCard = ({ Icon, title, description }: FeatureCardProps) => {
     return (
         <div className='group bg-white/[0.03] border-[#0046AA]/30 rounded-xl p-8 md:p-10 hover:bg-[#0046AA]/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0046AA]/20 transition-all duration-300 flex flex-col gap-6'>
             <div className='w-14 h-14 bg-gradient-to-br from-[#0046AA]/20 to-[#0059D1]/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300'>
-                <Icon className='w-7 h-7 text-[#0046AA]' />
+                <Icon className='w-7 h-7 text-[#0046AA]' strokeWidth={2} />
             </div>
 
             <div className='flex flex-col gap-3'>
