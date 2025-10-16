@@ -1,5 +1,6 @@
 import Main from "./pages/home/sections/Main"
 import Services from "./pages/home/sections/Services"
+import Testimonials from "./pages/home/sections/Testimonials"
 import WhyCodexy from "./pages/home/sections/WhyCodex"
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Main />  
       <WhyCodexy />
       <Services />
+      <Testimonials />
     </>
   )
 }
