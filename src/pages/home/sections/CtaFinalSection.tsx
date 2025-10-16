@@ -1,13 +1,8 @@
-import React from 'react';
-import { FaArrowRight } from 'react-icons/fa'; // Mantendo a dependência de ícones que você já usa (react-icons/fa)
+import { FaArrowRight } from 'react-icons/fa';
 import Footer from './Footer';
-// import Button from './caminho/para/Button'; // Assumindo que você tem um componente Button
 
 const PRIMARY_COLOR_HEX = '#0046AA';
-const SECONDARY_HOVER_COLOR_HEX = '#0059D1'; 
 
-// Componente simples para a CTA final
-// Se você não tiver um componente Button exportado, adapte o Button para o JSX abaixo
 const FinalButton = ({ text }: { text: string }) => (
     <button
         className={`flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-lg bg-gradient-to-r from-[#0046AA] to-[#0059D1] text-white font-bold hover:from-[#0059D1] hover:to-[#006FE8] transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-[#0046AA]/30 cursor-pointer`}
