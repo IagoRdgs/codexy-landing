@@ -1,13 +1,8 @@
-import React from 'react';
 import { Check, X, Star, Monitor, Settings, Palette } from 'lucide-react';
 
 // Cor Primária do Design System
 const PRIMARY_COLOR_HEX = '#0046AA';
-const SECONDARY_HOVER_COLOR_HEX = '#0059D1'; 
 
-// --------------------------------------------------------
-// DADOS DE PLANOS
-// --------------------------------------------------------
 const marketingPlansData = [
     {
         name: 'Bronze',
@@ -32,7 +27,7 @@ const marketingPlansData = [
             { text: 'Edição de vídeo semanal', included: true },
             { text: 'Ações de Saque', included: true },
         ],
-        featured: true, // DESTAQUE: Plano central para máxima conversão
+        featured: true, // DESTAQUE
         ctaText: 'COMEÇAR AGORA',
     },
     {
