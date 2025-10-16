@@ -64,7 +64,7 @@ export default function Testimonials() {
 
     const plugin = useRef(
         Autoplay({
-            delay: 8000,
+            delay: 5000,
             stopOnInteraction: true,
             stopOnMouseEnter: true
         })
