@@ -1,7 +1,4 @@
-import React from 'react';
 import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react';
-
-const PRIMARY_COLOR_HEX = '#0046AA';
 
 const footerLinks = [
     {
