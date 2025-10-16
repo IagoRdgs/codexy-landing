@@ -1,7 +1,7 @@
-import Main from "./pages/home/sections/Main"
-import Services from "./pages/home/sections/Services"
-import Testimonials from "./pages/home/sections/Testimonials"
-import WhyCodexy from "./pages/home/sections/WhyCodex"
+import Main from "./pages/home/sections/MainSection"
+import Services from "./pages/home/sections/ServicesSection"
+import Testimonials from "./pages/home/sections/TestimonialsSection"
+import WhyCodexy from "./pages/home/sections/WhyCodexSection"
 
 function App() {
 
