@@ -2,6 +2,7 @@ import codexyBg from '../../../assets/codexy_bg.png';
 import codexyLogo from '../../../assets/codexy_logo.png';
 import Button from '../../../components/layout/Button';
 import { FaArrowDown, FaArrowRight, FaPlay } from 'react-icons/fa';
+import { motion } from 'motion/react';
 
 export default function Main() {
     return (
@@ -9,7 +10,7 @@ export default function Main() {
             style={{ backgroundImage: `url(${codexyBg})` }}
             className='font-montserrat min-h-svh bg-cover bg-center bg-no-repeat flex justify-end px-8 md:px-24'
         >
-            <div className='flex flex-col md:w-[70%] justify-center text-white gap-6 md:gap-8'>
+            <motion.div initial={{ opacity: 0, y: 800 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.5 }} className='flex flex-col md:w-[70%] justify-center text-white gap-6 md:gap-8'>
                 <div className='w-full flex justify-center'>
                     <img src={codexyLogo} alt="codexy logo" width={250} height={150} />
                 </div>
@@ -30,11 +31,11 @@ export default function Main() {
 
                 <div className="absolute bottom-5 md:bottom-6 lg:bottom-2 left-1/2 -translate-x-1/2 z-10">
                     <div className="w-6 h-10 border-2 border-white/30 rounded-md md:rounded-full flex justify-center pt-2">
-                        <FaArrowDown size={12} className='text-white/60 animate-bounce md:hidden'/>
+                        <FaArrowDown size={12} className='text-white/60 animate-bounce md:hidden' />
                         <div className="hidden w-1 h-3 bg-white/50 rounded-full animate-bounce md:block"></div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 };

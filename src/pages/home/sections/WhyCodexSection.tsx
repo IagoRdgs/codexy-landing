@@ -1,4 +1,5 @@
 import { Target, Zap, Users } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export default function WhyCodexy() {
     const features = [
@@ -21,12 +22,12 @@ export default function WhyCodexy() {
 
     return (
         <section className='bg-[#0D1117] py-16 px-8'>
-            <div className='text-center mb-20'>
+            <motion.div initial={{ opacity: 0, x: -400 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1.5 }} className='text-center mb-20'>
                 <h2 className='text-white text-4xl md:text-5xl font-bold mb-4'>Por que escolher a <span className='bg-gradient-to-r from-[#0046AA] to-[#0059D1] bg-clip-text text-transparent'>Codexy</span>?</h2>
                 <p className='text-gray-400 text-md md:text-lg max-w-3xl mx-auto'>Somos mais que uma empresa de tecnologia. Somos parceiros estratégicos do seu crescimento!</p>
-            </div>
+            </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-20'>
+            <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 1 }} className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-20'>
                 {features.map((feature, index) => (
                     <FeatureCard
                         key={index}
@@ -35,7 +36,7 @@ export default function WhyCodexy() {
                         description={feature.description}
                     />
                 ))}
-            </div>
+            </motion.div>
 
             <StatsBox />
         </section>
@@ -50,8 +51,8 @@ type FeatureCardProps = {
 
 const FeatureCard = ({ Icon, title, description }: FeatureCardProps) => {
     return (
-        <div className='group bg-white/[0.03] border-[#0046AA]/30 rounded-xl p-8 md:p-10 hover:bg-[#0046AA]/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0046AA]/20 transition-all duration-300 flex flex-col gap-6'>
-            <div className='w-14 h-14 bg-gradient-to-br from-[#0046AA]/20 to-[#0059D1]/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300'>
+        <div className='group bg-white/[0.03] border-[#0046AA]/30 rounded-xl p-8 md:p-10 hover:bg-[#0046AA]/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0046AA]/20 focus:bg-[#0046AA]/50 focus:-translate-y-2 focus:shadow-2xl focus:shadow-[#0046AA]/20 transition-all duration-300 flex flex-col gap-6'>
+            <div className='w-14 h-14 bg-gradient-to-br from-[#0046AA]/20 to-[#0059D1]/10 rounded-xl flex items-center justify-center group-hover:scale-110 group-focus:scale-110 transition-all duration-300'>
                 <Icon className='w-7 h-7 text-[#0046AA]' strokeWidth={2} />
             </div>
 
@@ -75,15 +76,15 @@ const StatsBox = () => {
     ];
 
     return (
-        <div className='bg-gradient-to-br from-gray-900/80 via-[#0046AA]/5 to-gray-900/80 border border-[#0046AA]/35 rounded-2xl px-6 py-8 md:px-8 md:py-10'>
+        <motion.div initial={{ opacity: 0, rotateX: 90 }} whileInView={{ rotateX: 0, opacity: 1 }} transition={{ duration: 1.5 }} className='bg-gradient-to-br from-gray-900/80 via-[#0046AA]/5 to-gray-900/80 border border-[#0046AA]/35 rounded-2xl px-6 py-8 md:px-8 md:py-10'>
             <div className='grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#0046AA]/35 '>
                 {stats.map((stat, index) => (
                     <div key={index} className='text-center group py-6 md:py-0'>
-                        <h4 className='text-5xl font-black bg-gradient-to-r from-[#0046AA] to-[#0059D1] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300'>{stat.number}</h4>
+                        <h4 className='text-5xl font-black bg-gradient-to-r from-[#0046AA] to-[#0059D1] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300 group-focus:scale-110'>{stat.number}</h4>
                         <span className='text-gray-400 text-base md:text-lg font-medium'>{stat.label}</span>
                     </div>
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 };

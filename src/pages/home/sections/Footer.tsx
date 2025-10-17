@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const footerLinks = [
     {
@@ -47,12 +48,11 @@ export default function Footer() {
         // Fundo escuro consistente com WhyCodexySection e CTA_FinalSection
         <footer className='bg-[#0D1117] font-montserrat py-8 px-8 text-gray-400'>
             <div className='max-w-7xl mx-auto'>
-                <div className='grid grid-cols-2 md:grid-cols-5 gap-10 border-b border-gray-700 pb-10 mb-10'>
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5}} className='grid grid-cols-2 md:grid-cols-5 gap-10 border-b border-gray-700 pb-10 mb-10'>
 
                     {/* Bloco 1: Informações de Contato e Logo */}
-                    <div className='col-span-2 md:col-span-2 flex flex-col gap-6'>
+                    <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5}} className='col-span-2 md:col-span-2 flex flex-col gap-6'>
 
-                        {/* Placeholder simples para Logo */}
                         <div className="h-10 w-auto mb-4 text-3xl font-black text-white">CODEXY</div>
 
                         <p className='text-base leading-relaxed max-w-sm'>
@@ -73,11 +73,11 @@ export default function Footer() {
                                 <span>São Paulo, SP - Brasil</span>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Blocos de Links */}
                     {footerLinks.map((section, index) => (
-                        <div key={index} className='flex flex-col gap-4'>
+                        <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5, delay: index * 0.25 }} key={index} className='flex flex-col gap-4'>
                             {/* Tipografia de título secundário consistente: text-xl font-bold */}
                             <h4 className='text-xl font-bold text-white mb-2'>
                                 {section.title}
@@ -94,9 +94,9 @@ export default function Footer() {
                                     </li>
                                 ))}
                             </ul>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
 
                 {/* Bloco Final: Redes Sociais e Copyright */}
                 <div className='flex flex-col md:flex-row justify-between items-center'>

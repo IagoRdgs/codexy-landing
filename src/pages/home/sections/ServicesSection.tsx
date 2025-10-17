@@ -1,4 +1,5 @@
 import { Megaphone, Settings, Palette, Monitor, Check } from "lucide-react";
+import { motion } from 'motion/react';
 
 export default function Services() {
     const services = [
@@ -51,7 +52,7 @@ export default function Services() {
     return (
         <section className='bg-white py-16 px-8'>
             <div className='max-w-7xl mx-auto'>
-                <div className='text-center mb-20'>
+                <motion.div initial={{ opacity: 0, x: -400 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1.5 }} className='text-center mb-20'>
                     <div className='inline-flex items-center gap-2 bg-[#0046AA]/10 border border-[#0046AA]/30 px-6 py-2 rounded-full text-sm mb-6'>
                         <span className='bg-gradient-to-r from-[#0046AA] to-[#0059D1] bg-clip-text text-transparent font-semibold'>Nossos Serviços</span>
                     </div>
@@ -61,7 +62,7 @@ export default function Services() {
                         <span className='bg-gradient-to-r from-[#0046AA] to-[#0059D1] bg-clip-text text-transparent'>Serviços</span>
                     </h2>
                     <p className='text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed'>Oferecemos soluções integradas que cobrem todas as necessidades digitais da sua empresa, desde o marketing até o desenvolvimento de sistemas.</p>
-                </div>
+                </motion.div>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
                     {services.map((service, index) => (
@@ -70,6 +71,7 @@ export default function Services() {
                             title={service.title}
                             description={service.description}
                             features={service.features}
+                            index={index}
                         />
                     ))}
                 </div>
@@ -83,11 +85,12 @@ type ServiceProps = {
     title: string;
     description: string;
     features: string[];
+    index: number;
 };
 
-const ServiceCard = ({ Icon, title, description, features }: ServiceProps) => {
+const ServiceCard = ({ Icon, title, description, features, index }: ServiceProps) => {
     return (
-        <div className='group bg-white border border-gray-200 border-t-4 border-t-[#0046AA] rounded-2xl p-8 hover:border-[#0046AA] hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0046AA]/20 transition-all duration-300'>
+        <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .5, delay: index * .15 }} className='group bg-white border border-gray-200 border-t-4 border-t-[#0046AA] rounded-2xl p-8 hover:border-[#0046AA] hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0046AA]/20 transition-all duration-300'>
             <div className='w-14 h-14 bg-[#0046AA]/15 rounded-xl grid place-items-center mb-6 group-hover:bg-[#0046AA]/25 group-hover:scale-110 transition-all duration-300'>
                 <Icon className='w-7 h-7 text-[#0046AA]' strokeWidth={2} />
             </div>
@@ -103,6 +106,6 @@ const ServiceCard = ({ Icon, title, description, features }: ServiceProps) => {
                     </li>
                 ))}
             </ul>
-        </div>
+        </motion.div>
     );
 };

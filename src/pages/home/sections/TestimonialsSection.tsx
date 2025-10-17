@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { motion } from 'motion/react';
 
 export default function Testimonials() {
     const [api, setApi] = useState<CarouselApi | undefined>();
@@ -99,7 +100,7 @@ export default function Testimonials() {
     return (
         <section className='bg-[#F8FAFC] py-16 px-8'>
             <div className='max-w-7xl mx-auto'>
-                <div className='text-center mb-16'>
+                <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5 }} className='text-center mb-16'>
                     <div className='inline-flex items-center gap-2 bg-[#0046AA]/10 border border-[#0046AA]/30 px-6 py-2 rounded-full text-sm mb-6'>
                         <span className='bg-gradient-to-r from-[#0046AA] to-[#0059D1] bg-clip-text text-transparent font-semibold'>Depoimentos</span>
                     </div>
@@ -109,9 +110,9 @@ export default function Testimonials() {
                         <span className='bg-gradient-to-r from-[#0046AA] to-[#0059D1] bg-clip-text text-transparent'>clientes</span>
                         {' '}dizem?
                     </h2>
-                </div>
+                </motion.div>
 
-                <div className='w-full max-w-4xl mx-auto relative'>
+                <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5 }} className='w-full max-w-4xl mx-auto relative'>
                     <Carousel
                         plugins={[plugin.current]}
                         setApi={setApi}
@@ -160,7 +161,7 @@ export default function Testimonials() {
                             ))}
                         </div>
                     )}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

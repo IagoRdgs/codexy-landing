@@ -1,4 +1,5 @@
 import { Check, X, Star, Monitor, Settings, Palette } from 'lucide-react';
+import { motion } from 'motion/react';
 
 // Cor Primária do Design System
 const PRIMARY_COLOR_HEX = '#0046AA';
@@ -71,7 +72,7 @@ const PricingCard = ({ plan }: { plan: typeof marketingPlansData[0] }) => {
             : 'bg-gray-100 text-gray-700 hover:bg-gray-200';
 
     return (
-        <div className={`flex flex-col bg-white p-8 rounded-2xl border-2 relative ${highlightClasses}`}>
+        <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5}} className={`flex flex-col bg-white p-8 rounded-2xl border-2 relative ${highlightClasses}`}>
 
             {plan.featured && (
                 <div className={`absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[${PRIMARY_COLOR_HEX}] text-white text-sm font-bold py-1 px-4 rounded-full shadow-md flex items-center`}>
@@ -111,7 +112,7 @@ const PricingCard = ({ plan }: { plan: typeof marketingPlansData[0] }) => {
             >
                 {plan.ctaText}
             </button>
-        </div>
+        </motion.div>
     );
 };
 
@@ -138,7 +139,7 @@ const projectServices = [
 
 const ProjectServiceCard: React.FC<{ service: typeof projectServices[0] }> = ({ service }) => {
     return (
-        <div className={`group bg-white border border-gray-200 border-t-4 border-t-4 border-t-[#0046AA] rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-gray-300 transition-all duration-300 flex flex-col items-center text-center`}>
+        <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5}} className={`group bg-white border border-gray-200 border-t-4 border-t-[#0046AA] rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-gray-300 transition-all duration-300 flex flex-col items-center text-center`}>
             <service.icon className={`w-10 h-10 text-[${PRIMARY_COLOR_HEX}] mb-4`} strokeWidth={2} />
             
             <h3 className='text-xl md:text-2xl font-bold text-gray-900 mb-3'>{service.title}</h3>
@@ -153,7 +154,7 @@ const ProjectServiceCard: React.FC<{ service: typeof projectServices[0] }> = ({ 
             >
                 {service.cta}
             </button>
-        </div>
+        </motion.div>
     );
 };
 
@@ -163,38 +164,38 @@ export default function PricingSection() {
             <div className='max-w-7xl mx-auto px-8'>
 
                 {/* Bloco 1: Marketing Digital (Planos Recorrentes) */}
-                <div className="text-center mb-16">
+                <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5}} className="text-center mb-16">
                     <h2 className='text-4xl md:text-5xl font-bold mb-4 text-gray-900'>
                         Marketing Digital: Comece a <span className={`text-[${PRIMARY_COLOR_HEX}]`}>Crescer</span>
                     </h2>
                     <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
                         Escolha um de nossos planos mensais e transforme sua presença online.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Cards de Preço */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch mb-24">
+                <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5}} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch mb-24">
                     {marketingPlansData.map((plan) => (
                         <PricingCard key={plan.name} plan={plan} />
                     ))}
-                </div>
+                </motion.div>
 
                 {/* Bloco 2: Serviços por Projeto (Orçamento) */}
-                <div className="text-center mb-16 pt-12 border-t border-gray-200">
+                <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5}} className="text-center mb-16 pt-12 border-t border-gray-200">
                     <h2 className='text-4xl md:text-5xl font-bold mb-4 text-gray-900'>
                         Projetos Web & Automação <span className={`text-[${PRIMARY_COLOR_HEX}]`}>Customizados</span>
                     </h2>
                     <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
                         Soluções sob medida para o seu desafio. Receba um orçamento detalhado e sem compromisso.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Cards de Serviço */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5}} className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {projectServices.map((service) => (
                         <ProjectServiceCard key={service.title} service={service} />
                     ))}
-                </div>
+                </motion.div>
 
             </div>
         </section>
