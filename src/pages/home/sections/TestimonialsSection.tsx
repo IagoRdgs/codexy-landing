@@ -153,7 +153,7 @@ export default function Testimonials() {
                                     aria-label={`ir para o depoimento ${index + 1}`}
                                     className={`w-3 h-3 rounded-full transition-all duration-300 ease-in-out ${index === selectedIndex
                                         ? 'bg-[#0046AA] w-5'
-                                        : 'bg-gray-300 hover:bg-gray-400'
+                                        : 'bg-gray-300 hover:bg-gray-200'
                                         }`}
                                 >
 

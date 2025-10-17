@@ -46,7 +46,7 @@ const SocialIcon = ({ Icon, href, label }: { Icon: React.ElementType, href: stri
 export default function Footer() {
     return (
         // Fundo escuro consistente com WhyCodexySection e CTA_FinalSection
-        <footer className='bg-[#0D1117] font-montserrat py-8 px-8 text-gray-400'>
+        <footer className='bg-[#0D1117] font-montserrat py-8 px-8 text-gray-200'>
             <div className='max-w-7xl mx-auto'>
                 <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5}} className='grid grid-cols-2 md:grid-cols-5 gap-10 border-b border-gray-700 pb-10 mb-10'>
 

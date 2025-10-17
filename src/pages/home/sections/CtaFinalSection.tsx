@@ -24,7 +24,7 @@ export default function CTA_FinalSection() {
                     Pronto para <span className={`text-[${PRIMARY_COLOR_HEX}]`}>Impulsionar</span> o Seu Negócio?
                 </h2>
 
-                <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
                     Não perca mais tempo com estratégias que não funcionam. Fale com um de nossos especialistas e comece a transformar seus resultados hoje mesmo.
                 </p>
 

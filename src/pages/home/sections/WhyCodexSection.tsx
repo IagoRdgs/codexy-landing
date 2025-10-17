@@ -22,9 +22,9 @@ export default function WhyCodexy() {
 
     return (
         <section className='bg-[#0D1117] py-16 px-8'>
-            <motion.div initial={{ opacity: 0, x: -400 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1.5 }} className='text-center mb-20'>
+            <motion.div initial={{ opacity: 0, x: -200 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1.5 }} className='text-center mb-20'>
                 <h2 className='text-white text-4xl md:text-5xl font-bold mb-4'>Por que escolher a <span className='bg-gradient-to-r from-[#0046AA] to-[#0059D1] bg-clip-text text-transparent'>Codexy</span>?</h2>
-                <p className='text-gray-400 text-md md:text-lg max-w-3xl mx-auto'>Somos mais que uma empresa de tecnologia. Somos parceiros estratégicos do seu crescimento!</p>
+                <p className='text-gray-200 text-md md:text-lg max-w-3xl mx-auto'>Somos mais que uma empresa de tecnologia. Somos parceiros estratégicos do seu crescimento!</p>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 1 }} className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-20'>
@@ -60,7 +60,7 @@ const FeatureCard = ({ Icon, title, description }: FeatureCardProps) => {
                 <h3 className='text-xl md:text-2xl font-bold text-white'>
                     {title}
                 </h3>
-                <p className='text-gray-400 leading-relaxed text-base'>
+                <p className='text-gray-200 leading-relaxed text-base'>
                     {description}
                 </p>
             </div>
@@ -81,7 +81,7 @@ const StatsBox = () => {
                 {stats.map((stat, index) => (
                     <div key={index} className='text-center group py-6 md:py-0'>
                         <h4 className='text-5xl font-black bg-gradient-to-r from-[#0046AA] to-[#0059D1] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300 group-focus:scale-110'>{stat.number}</h4>
-                        <span className='text-gray-400 text-base md:text-lg font-medium'>{stat.label}</span>
+                        <span className='text-gray-200 text-base md:text-lg font-medium'>{stat.label}</span>
                     </div>
                 ))}
             </div>

@@ -63,7 +63,7 @@ const marketingPlansData = [
 const PricingCard = ({ plan }: { plan: typeof marketingPlansData[0] }) => {
     const highlightClasses = plan.featured
         ? `border-[${PRIMARY_COLOR_HEX}] shadow-2xl shadow-[${PRIMARY_COLOR_HEX}]/30 transform scale-[1.03] transition-all duration-300`
-        : 'border-gray-200 hover:border-gray-400/50 hover:shadow-lg transition-all duration-300';
+        : 'border-gray-200 hover:border-gray-200/50 hover:shadow-lg transition-all duration-300';
 
     const ctaClasses = plan.featured
         ? `bg-[${PRIMARY_COLOR_HEX}] text-white hover:bg-blue-900 shadow-lg`
